@@ -11,7 +11,7 @@ public class Main {
         char str[] = "121234452361".toCharArray();
         System.out.println(removeDuplicates(str));
 
-       Execut.run();
+        Execut.run();
 
     }
 }

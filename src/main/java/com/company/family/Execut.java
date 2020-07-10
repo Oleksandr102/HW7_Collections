@@ -4,9 +4,10 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Execut {
-    public static void run(){
+    public static void run() {
         familyRealization();
     }
+
     public static void familyRealization() {
         Map<Family, Integer> familyMap = new TreeMap<>();
         Map<Family, Integer> titles = new TreeMap<>(TitleComp.reverseTitleComparator());
@@ -24,19 +25,20 @@ public class Execut {
     }
 
     public static void dropMap(Map<Family, Integer>... maps) {
-        for (Map<Family, Integer> map : maps) {
-            map.put(new Family("Dan", 52, "Beer", "Freeman"), 0);
-            map.put(new Family("Leroy", 44, "Jenkins", "Foul"), 0);
-            map.put(new Family("Baal", 88, "==Skull==", "Daemon"), 0);
-            map.put(new Family("Zero", 92, "Knife", "TreasureHunter"), 0);
-            map.put(new Family("Ironman", 72, "====Steel====", "Hero"), 0);
-            map.put(new Family("Artur", 45, "=====Stone=====", "King"), 0);
-            map.put(new Family("Axton", 63, "=======Ghost=======", "Sniper"), 0);
-            map.put(new Family("Salvador", 12, "========Shotgun========", "Gunzerker"), 0);
-            map.put(new Family("Maya", 94, "Cry", "Syrena"), 0);
-            map.put(new Family("Cat", 516, "Mr", "Justcat"), 0);
+        for (Map<Family, Integer> familyMap : maps) {
+            familyMap.put(new Family("Bro", 52, "Yo", "Net"), 0);
+            familyMap.put(new Family("Chill", 44, "Sleep", "Set"), 0);
+            familyMap.put(new Family("Nuts", 88, "Bet", "Wet"), 0);
+            familyMap.put(new Family("Ill", 92, "Knife", "Get"), 0);
+            familyMap.put(new Family("Dead", 72, "Wire", "Trip"), 0);
+            familyMap.put(new Family("Monster", 45, "Kill", "Oops"), 0);
+            familyMap.put(new Family("Dreak", 63, "Low", "Swim"), 0);
+            familyMap.put(new Family("Doctor", 12, "Surgeon", "Glad"), 0);
+            familyMap.put(new Family("Micro", 94, "Macro", "Nasty"), 0);
+            familyMap.put(new Family("Boy", 516, "Skill", "Gret"), 0);
         }
     }
+
     public static void printMap(Map<Family, Integer> map) {
         map.forEach((Family, Integer) -> System.out.println(Family));
     }

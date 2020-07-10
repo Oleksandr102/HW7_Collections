@@ -12,9 +12,6 @@ public class Family implements Comparable<Family> {
         this.quantityMember = quantityMember;
         this.title = title;
         this.nameOfEmblem = nameOfEmblem;
-
-//        reverseTitleComparator();
-//        lengthNameOfEmblemComparator();
     }
 
     public String getName() {
