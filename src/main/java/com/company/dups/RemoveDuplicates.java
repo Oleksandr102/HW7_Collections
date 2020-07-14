@@ -1,21 +1,12 @@
 package main.java.com.company.dups;
 
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 
 public class RemoveDuplicates {
-    public static String removeDuplicates(char str[]) {
-        int index = 0;
-        int j;
-        for (int i = 0; i < str.length; i++) {
-            for (j = 0; j < i; j++) {
-                if (str[i] == str[j]) {
-                    break;
-                }
-            }
-            if (j == i) {
-                str[index++] = str[i];
-            }
-        }
-        return String.valueOf(Arrays.copyOf(str, index));
+    public static void removeDuplicates(String[] str) {
+        LinkedHashSet<String> numSet = new LinkedHashSet<>(Arrays.asList(str));
+        String[] newArray = numSet.toArray(new String[0]);
+        System.out.println(Arrays.toString(newArray));
     }
 }

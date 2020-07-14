@@ -1,14 +1,24 @@
 package main.java.com.company.family;
 
+import main.java.com.company.family.comparators.EmblemComp;
+import main.java.com.company.family.comparators.TitleComp;
+
+import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
 
+import static main.java.com.company.dups.RemoveDuplicates.removeDuplicates;
+
 public class Execut {
     public static void run() {
-        familyRealization();
+        executable();
     }
 
-    public static void familyRealization() {
+    public static void executable() {
+        String[] str = {"1", "2", "1", "2", "3", "4", "4", "5", "2", "3", "6", "1"};
+        System.out.println(Arrays.toString(str));
+        removeDuplicates(str);
+
         Map<Family, Integer> familyMap = new TreeMap<>();
         Map<Family, Integer> titles = new TreeMap<>(TitleComp.reverseTitleComparator());
         Map<Family, Integer> emblems = new TreeMap<>(EmblemComp.sortByEmblem());

@@ -1,6 +1,10 @@
 package main.java.com.company.family;
 
+import java.util.Objects;
+
 public class Family implements Comparable<Family> {
+
+
     private String name;
     private int quantityMember;
     private String title;
@@ -46,5 +50,14 @@ public class Family implements Comparable<Family> {
                 '}';
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, quantityMember, title, nameOfEmblem);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 
 }

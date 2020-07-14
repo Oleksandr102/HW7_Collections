@@ -1,5 +1,7 @@
-package main.java.com.company.family;
+package main.java.com.company.family.comparators;
 
+
+import main.java.com.company.family.Family;
 
 import java.util.Comparator;
 
